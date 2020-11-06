@@ -47,7 +47,7 @@ exports.signUpController=async(req,res,next)=>{
         createUser=await new User({
             name,
             email,
-            image:`http://localhost:3001/${file.name}`,
+            image:`${file.name}`,
             password,
             post:[]
         })
