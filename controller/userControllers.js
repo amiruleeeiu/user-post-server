@@ -38,6 +38,7 @@ exports.signUpController=async(req,res,next)=>{
     }
 
     let{name,email,image,password}=req.body;
+    console.log(req.body);
     let file=req.files.file;
     file.mv(`${__dirname}/images/${file.name}`)
 
@@ -84,6 +85,7 @@ exports.loginController=async(req,res,next)=>{
         return next(error);
     }
     let{email,password}=req.body
+    console.log(email,password);
     let user;
     try{
         user=await User.findOne({email:email})
