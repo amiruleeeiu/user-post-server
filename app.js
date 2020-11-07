@@ -21,7 +21,7 @@ app.use((err,req,res,next)=>{
     res.json({message:err.message || 'An Unknown error occured'})
 })
 
-app.get('/name',(req,res)=>{
+app.get('/',(req,res)=>{
     res.json({message:'send data'})
 })
 
